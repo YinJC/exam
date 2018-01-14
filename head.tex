@@ -1,0 +1,38 @@
+\fancyhf{}
+\fancyfoot[CO,CE]{\vspace*{1mm}第\,\thepage\,页 , 共 ~\pageref{LastPage} 页}
+\sbox{\zdx}
+{\parbox{27cm}{\centering
+	座位号~\underline{\makebox[34mm][c]{}}~ 班~级\underline{\makebox[34mm][c]{}}~\CJKfamily{song} 学~号\underline{\makebox[44mm][c]{}}~\CJKfamily{song} 姓~名\underline{\makebox[34mm][c]{}} ~\\
+	\vspace{3mm}
+请在所附答题纸上空出密封位置。并填写试卷序号、班级、学号和 姓名\\
+%答题时学号
+\vspace{1mm}
+\dotfill{} 密\dotfill{}封\dotfill{}线\dotfill{} \\
+	}}
+\reversemarginpar
+	
+\begin{spacing}{1.25}
+	\begin{center}
+\begin{LARGE}
+\school~\underline{~\xuenian~}\,学年第\,\underline{~\xueqi~}\,学期\\
+\underline{~\kecheng~}\,\iftagged{ans}{试卷~参考答案和评分标准}{试卷}\\
+\end{LARGE}
+(闭卷笔试\ \ 90 分钟)\\
+	\vspace{0.5cm}
+\begin{tabular}{|m{0.03\textwidth}|*{8}{m{0.035\textwidth}|}p{0.04\textwidth}|}
+	\hline
+\centering  题~号 & \centering 一 & \centering 二 & \centering 三 & \centering 四& \centering 五 & \centering 六 & \centering 七 % & \centering 八 & \centering 九 & \centering 十
+& \centering 总~分 & \makecell{阅卷\\教师} \rule{0pt}{3mm} \\
+	\hline
+	\centering 分~数 &  &  &  &  &  &  &  &  &  %&  &
+	\rule{0pt}{8mm} \\\hline
+				% \centering 计 &  &  &  &  &  &  &  &  &  &  & \\
+				% \centering 分 &  &  &  &  &  &  &  &  &  &  & \\
+				% \centering 人 &  &  &  &  &  &  &  &  &  &  & \\  \hline
+\end{tabular}
+\end{center}
+\end{spacing}
+\vspace{-0.5cm}
+\setlength{\marginparsep}{1.7cm}
+\putzdx %%装订线--奇页数
+\vspace{1cm}
