@@ -1,7 +1,7 @@
 % !Mode::"TeX:UTF-8"
 \documentclass[twocolumn,landscape,fntef,UTF8]{ctexart}
 \include{package}
-\usetag{ans}% 注释掉该行语句不显示答案
+%\usetag{ans}% 注释掉该行语句不显示答案
 \begin{document}
 \newcommand{\school}{无名氏大学}
 \def\kecheng{不知道写什么}
@@ -86,6 +86,7 @@
 \qst{多元函数微分法~(每题~7分, 共~21分)}
 \begin{enumerate}%\setcounter{enumi}{15}
 \item 设~$\bs{a}=(3,4,5),~\bs{b}=(1,-2,3)$, 求~$\bs{a}\cdot\bs{b}$, $\bs{a}$ 在 $ \bs{b}$ 上的投影, ~$\bs{a}\times\bs{b}$.
+\renewcommand{\kb}{3cm}
 \jd{~$\bs{a}\cdot\bs{b} = 3-8+15=10$ \dotfill{}(2')
 		
 		~$(\bs{a})_{\bs{b}} = \dfrac{\bs{a}\cdot\bs{b}}{|\bs{b}|}=\dfrac{10}{\sqrt{14}}$ \dotfill{}(2')
@@ -94,116 +95,93 @@
 		\bs{i} & \bs{j} & \bs{k}\\
 		3 & 4 & 5\\
 		1 & -2 & 3\\
-		\end{vmatrix}=(22,-4,-10).$ \dotfill{}(3')}
+		\end{vmatrix}=(22,-4,-10).$ \dotfill{}(3')
+}
 
 	
 \item  求过点~$A(1,2,-1), B(2,3,0),C(3,3,2)$ 的三角形~$\triangle ABC$ 的面积和它们确定的平面方程.
+\renewcommand{\kb}{3cm}
+\jd{由题设~$\overrightarrow{AB}=(1,1,1),\overrightarrow{AC}=(2,1,3)$,  \dotfill{}(2')
 
-解：由题设~$\overrightarrow{AB}=(1,1,1),\overrightarrow{AC}=(2,1,3)$, \dotfill{}(2')
-
-故~$\overrightarrow{AB}\times \overrightarrow{AC}=\begin{vmatrix}
-\bs{i}&\bs{j} &\bs{k}\\
-1&1&1\\
-2&1&3\\
-\end{vmatrix}=(2,-1,-1)$,
+  故~$\overrightarrow{AB}\times \overrightarrow{AC}=
+  \begin{vmatrix}
+   \bs{i}&\bs{j} &\bs{k}\\
+   1&1&1\\
+   2&1&3\\
+  \end{vmatrix}=(2,-1,-1)$,
 
 三角形~$\triangle ABC$ 的面积为~$S_{\triangle ABC}=\dfrac{1}{2}\mid\overrightarrow{AB}\times \overrightarrow{AC}\mid=\dfrac{1}{2}\sqrt{6}.$  \dotfill{}(2')
 
 所求平面的方程为~$2(x-2)-(y-3)-z=0$, 即~$2x-y-z-1=0$
- \dotfill{}(3')			
+ \dotfill{}(3')
+}			
 
 \item 设函数~$z = f(u,v)$ 具有一阶连续偏导数,~$z = f(x^2+y^2,\dfrac{x}{y})$, 求~$\dfrac{\partial z}{\partial x}, \dfrac{\partial z}{\partial y}$, 并写出全微分~$\dif z$.
-			
-解： $\dfrac{\partial z}{\partial x} = 2xf_1' + \dfrac{1}{y}f_2'$, \dotfill{}(3')
+\renewcommand{\kb}{3cm}			
+\jd{$\dfrac{\partial z}{\partial x} = 2xf_1' + \dfrac{1}{y}f_2'$, \dotfill{}(3')
 			
 $\dfrac{\partial z}{\partial y} = 2y f_1' - \dfrac{x}{y^2}f_2'$, \dotfill{}(3')
 			
 $\dif z =\dfrac{\partial z}{\partial x}\dif x + \dfrac{\partial z}{\partial y} \dif y\\	=(2xf_1' + \dfrac{1}{y}f_2')\dif x +(2y f_1' - \dfrac{x}{y^2}f_2')\dif y$, \dotfill{}(1')
+}
 \end{enumerate}
-\vspace{2cm}
 
-\newpage
-\section*{\hspace{5cm}五、重积分~(每题~7 分, 共~ 21 分)}
-\vspace{-1cm}
-\begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
-\hline
-			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-\centering 阅卷人& \\
-\hline
-\centering 得~~分 &  \\
-\hline
-\end{tabular}
-		
-		\begin{enumerate}\setcounter{enumi}{18}
-			\item 计算二重积分~$\ds{\iint\limits_{D}\dfrac{\sin x}{x}\dif \sigma}$, 其中~~$D=\{(x,y)\mid 0\leqslant x \leqslant \pi, 0\leqslant y \leqslant \pi x\}$.
+\qst{重积分~(每题~7 分, 共~ 21 分)}
+\begin{enumerate}%\setcounter{enumi}{18}
+\item 计算二重积分~$\ds{\iint\limits_{D}\dfrac{\sin x}{x}\dif \sigma}$, 其中~~$D=\{(x,y)\mid 0\leqslant x \leqslant \pi, 0\leqslant y \leqslant \pi x\}$.
+\renewcommand{\kb}{4cm}
+\jd{~$\ds{\iint\limits_{D}\dfrac{\sin x}{x}\dif \sigma}
+	=  \ds{\int_0^\pi\dfrac{\sin x}{x}\dif x\int_{0}^{\pi x}\dif y}$  \dotfill{}(2')
 			
-			解：
-			~$\ds{\iint\limits_{D}\dfrac{\sin x}{x}\dif \sigma}= \ds{\int_0^\pi\dfrac{\sin x}{x}\dif x\int_{0}^{\pi x}\dif y}$  \dotfill{}(2')
+  ~$= \ds{\int_0^\pi\dfrac{\sin x}{x}(\pi x- 0)\dif x = \pi\int_0^\pi\sin x\dif x  }$  \dotfill{}(3')
 			
-			~$= \ds{\int_0^\pi\dfrac{\sin x}{x}(\pi x- 0)\dif x = \pi\int_0^\pi\sin x\dif x  }$  \dotfill{}(3')
+  ~$=  \pi\Big[-\cos x \Big]_0^\pi = 2\pi $  \dotfill{}(2')
+}
 			
-			~$=  \pi\Big[-\cos x \Big]_0^\pi = 2\pi $  \dotfill{}(2')
+\item 计算二重积分~$\ds{\iint\limits_{D}\me^{x^2+y^2}\dif \sigma}$, 其中~$D=\{(x,y)\Big| x^2+ y^2 \leqslant 25\}$.
+\jd{~$D: 0\leqslant \theta \leqslant 2\pi, 0\leqslant \rho \leqslant 5$  \dotfill{}(2')
 			
-			\item 计算二重积分~$\ds{\iint\limits_{D}\me^{x^2+y^2}\dif \sigma}$, 其中~$D=\{(x,y)\Big| x^2+ y^2 \leqslant 25\}$.
-\begin{tikzpicture}[domain=0:4]
-\tkzInit[xmax=4.2,ymax=3.2,xmin=-1.2,ymin=-1.2,xstep=1]
-%\tkzGrid
-\tkzAxeXY
-\draw[color=red] plot (\x,\x) node[right] {$f(x)=x$};
-\draw[color=orange,domain=-0.5:4] plot (\x,{0.05*exp(\x)}) node[right] {$f(x)=\frac{1}{20}\mathrm e^x$};
-\draw[color=blue,domain=0:4] plot (\x,{sin(\x r)}) node[right] {$f(x)=\sin x$};
-\draw[color=blue!50,x=1cm,y=0.5cm,domain=-0.5:2.4] plot (\x, {(\x)^3-4*(\x)+2}) node[right] {$f(x)=x^3-4x+2$};
-\end{tikzpicture}
-
-			解：~$D: 0\leqslant \theta \leqslant 2\pi, 0\leqslant \rho \leqslant 5$  \dotfill{}(2')
+	~$\ds{\iint\limits_{D}\me^{x^2+y^2}\dif \sigma}= \ds{\int_0^{2\pi}\dif \theta\int_0^5\me^{\rho^2}\rho\dif \rho}$  \dotfill{}(2')
 			
-			~$\ds{\iint\limits_{D}\me^{x^2+y^2}\dif \sigma}= \ds{\int_0^{2\pi}\dif \theta\int_0^5\me^{\rho^2}\rho\dif \rho}$  \dotfill{}(2')
-			
-			~$= \ds{2\pi \cdot\Big[\frac{1}{2}\me^{\rho^2}\Big]_0^5 = \pi(\me^{25}-1)} $  \dotfill{}(3')
-			
-			\vspace{1cm}
-			\item 计算三重积分~$\ds{\iiint\limits_{\Omega}z \dif x\dif y\dif z}$, 其中~$\Omega$ 是由~圆锥面~$z = \sqrt{x^2+ y^2}$ 和平面~$z=4$ 围成的闭区域.
-			
-			解：~$\Omega = \{(x,y,z)\mid x^2 + y^2 \leqslant z^2,0\leqslant z\leqslant 4\}$ \dotfill{}(2')
+	~$= \ds{2\pi \cdot\Big[\frac{1}{2}\me^{\rho^2}\Big]_0^5 = \pi(\me^{25}-1)} $  \dotfill{}(3')
+}
+\item 计算三重积分~$\ds{\iiint\limits_{\Omega}z \dif x\dif y\dif z}$, 其中~$\Omega$ 是由~圆锥面~$z = \sqrt{x^2+ y^2}$ 和平面~$z=4$ 围成的闭区域.
+\jd{~$\Omega = \{(x,y,z)\mid x^2 + y^2 \leqslant z^2,0\leqslant z\leqslant 4\}$ \dotfill{}(2')
 			
 			~$ \ds{\iiint\limits_{\Omega}z \dif x\dif y\dif z =  \int_0^4 z \dif z \iint\limits_{D_z}\dif x\dif y}$ \dotfill{}(3')
 			
 			~$  = \ds{\int_0^4z\times \pi z^2\dif z= \dfrac{\pi z^4}{4}\Big|_0^4=64\pi}$ \dotfill{}(2')
-		\end{enumerate}
-		\newpage
-		\putzdx %%装订线--奇数页
-		\section*{\hspace{5cm} 六、无穷级数~(本题~13 分)}
-		\vspace{-2cm}
-		\begin{tabular}{|p{0.05\textwidth}|p{0.05\textwidth}|}
-			\hline
-			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-			\centering  阅卷人& \\
-			\hline
-			\centering 得~~分 &  \\
-			\hline
-		\end{tabular}
+}
+\end{enumerate}
+%		\newpage
+%		\putzdx %%装订线--奇数页
+\qst{无穷级数~(本题~12 分)}
+%\begin{enumerate}%\setcounter{enumi}{21}
+%\item 
 
-		\begin{enumerate}\setcounter{enumi}{21}
-			\item 求幂级数~$\ds{\sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}} $ 的收敛域与和函数~$s(x)$.
+求幂级数~$\ds{\sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}} $ 的收敛域与和函数~$s(x)$.
+\jd{令~$t = x-1$,  上述级数变为
+	 $\ds{\sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}} $  \dotfill{}(2')
 			
-			解：令~$t = x-1$, 上述级数变为$\ds{\sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}} $  \dotfill{}(2')
+	因为 $\rho = \lim\limits_{n\rightarrow\infty}\Big| \dfrac{a_{n+1}}{a_{n}}\Big| = \lim\limits_{n\rightarrow\infty}\dfrac{n\cdot3^n}{(n+1)\cdot3^{n+1}} = \dfrac{1}{3}$, \dotfill{}(2')
 			
-			因为 $\rho = \lim\limits_{n\rightarrow\infty}\Big| \dfrac{a_{n+1}}{a_{n}}\Big| = \lim\limits_{n\rightarrow\infty}\dfrac{n\cdot3^n}{(n+1)\cdot3^{n+1}} = \dfrac{1}{3}$, \dotfill{}(2')
+	所以，收敛半径$R=3 $ 收敛区间~$|t|<3$, 即~$-2<x<4$. \dotfill{}(3')
 			
-			所以，收敛半径$R=3 $ 收敛区间~$|t|<3$, 即~$-2<x<4$. \dotfill{}(3')
+	当~$x = 4$ 时，级数变为~$\sum\limits_{n=1}^\infty\dfrac{1}{n}$ , 这级数发散， 当~$x = -2$ 时，级数变为~$\sum\limits_{n=1}^\infty\dfrac{(-1)^n}{n}$ , 这级数收敛, 原级数的收敛域为~$[-2,4)$.  \dotfill{}(2')
 			
-			当~$x = 4$ 时，级数变为~$\sum\limits_{n=1}^\infty\dfrac{1}{n}$ , 这级数发散， 当~$x = -2$ 时，级数变为~$\sum\limits_{n=1}^\infty\dfrac{(-1)^n}{n}$ , 这级数收敛, 原级数的收敛域为~$[-2,4)$.  \dotfill{}(2')
+	设~$s(x) = \sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}$ , 则
 			
-			设~$s(x) = \sum\limits_{n=1}^\infty\dfrac{(x-1)^n}{n\cdot3^n}$ , 则
+	$s'(x) = \sum\limits_{n=1}^\infty\left(\dfrac{(x-1)^n}{n\cdot3^n}\right)' = \sum\limits_{n=1}^\infty\dfrac{(x-1)^{n-1}}{3^n} = \dfrac{\frac{1}{3}}{1-\frac{x-1}{3}}=\dfrac{1}{4-x}$
 			
-			$s'(x) = \sum\limits_{n=1}^\infty\left(\dfrac{(x-1)^n}{n\cdot3^n}\right)' = \sum\limits_{n=1}^\infty\dfrac{(x-1)^{n-1}}{3^n} = \dfrac{\frac{1}{3}}{1-\frac{x-1}{3}}=\dfrac{1}{4-x}$
+	$s(1) = 0$, $s(x) = s(1)+\ds{\int_1^x s'(t)\dif t = 0 + \int_1^x\dfrac{1}{4-t}\dif t }$
 			
-			$s(1) = 0$, $s(x) = s(1)+\ds{\int_1^x s'(t)\dif t = 0 + \int_1^x\dfrac{1}{4-t}\dif t }$
-			
-			$\ds{ =-\ln(4-t)\Big|_1^x = \ln3-\ln(4-x),-2\leqslant x<4.}$ \dotfill{}(4')
-		\end{enumerate}
+	$\ds{ =-\ln(4-t)\Big|_1^x = \ln3-\ln(4-x),-2\leqslant x<4.}$ \dotfill{}(4')
+}
+%\end{enumerate}
 	
-	\begin{tikzpicture}
+\end{document}
+\newpage	
+\begin{tikzpicture}
 	\begin{axis}[x=.5cm,xmin=0,ymin=0]
 	\addplot[mark=none,smooth,red,thick] expression[domain=0:12]{exp(((x-6)^2)/(-9))};
 	\addplot[mark=none,smooth,blue,thick] expression[domain=1:19]{exp(((x-10)^2)/(-25))};
@@ -212,12 +190,12 @@ $\dif z =\dfrac{\partial z}{\partial x}\dif x + \dfrac{\partial z}{\partial y} \
 	\addplot[dotted,mark=none]coordinates{(6,0)(6,1)};
 	\addplot[dotted,mark=none]coordinates{(10,0)(10,1)(0,1)};
 	\addplot[dashed,mark=none]coordinates{(7.5,0)(7.5,0.7788)(0,0.7788)};
-	\node[pin=-45:{$P$}] at (axis cs:0,0.7788) {};
+	\node[pin=-45:{$P_y$}] at (axis cs:0,0.7788) {};
 	\node[pin=135:{$P_x$}] at (axis cs:7.5,0) {};
 	\end{axis}
-	\end{tikzpicture}
+\end{tikzpicture}
 %	\end{spacing}
-\newpage
+
 \begin{tikzpicture}
 \begin{axis}
 \addplot[color=red]{exp(x)};
@@ -243,7 +221,45 @@ surf,
 {exp(-x^2-y^2)*x};
 \end{axis}
 \end{tikzpicture}
-
+\begin{tikzpicture}
+%画直角坐标系
+\draw[thick,-latex](-3,0)--(3,0)node[below]{$ x $};
+\draw[thick,-latex](0,-3)--(0,3)node[left]{$ y $};
+%画椭圆
+\draw[thick,blue](2,0)arc(0:360:2 and 1.732);
+%定义坐标
+\coordinate[label=above:$ P $](P)at(2*cos 60,1.732*sin 60);
+\coordinate[label=below:$ F_1 $](f1)at(-1,0);
+\coordinate[label=below:$ F_2 $](f2)at(1,0);
+\coordinate[label=225:$ B $](B)at(-2,0);
+\coordinate[label=-45:$ A $](A)at(2,0);
+\coordinate[label=45:$ N $](N)at(0,2);
+\coordinate[label=35:$ H $](H)at($ (N)!(f2)!(P) $);
+%找交点
+\tkzInterLL(f1,P)(f2,H) \tkzGetPoint{G}
+\coordinate[label=45:$ G $](g)at(G);
+%画切线
+\draw[thick,blue,domain=-1:3]plot(\x,{2-(1/2)*\x});
+%连线
+\draw[thick,blue](B)--(H)(f1)--(g)(f2)--(g)(A)--(H)(f2)--(P);
+\draw[thick,blue,dashed](0,0)--(H);
+%标记原点
+\node at (-.2,-.2){$ O $};
+%画直角符号
+\draw[thick,red]($ (H)!0.15!(g) $)coordinate(c1)--($ (c1)!1!-90:(H) $)coordinate(c2)--($ (c2)!1!-90:(c1) $);
+%画点
+\foreach \x in {P,f1,f2,B,A,N,H,g}
+\shade[ball color=red](\x)circle(2pt);
+\end{tikzpicture}
+\begin{tikzpicture}[domain=0:4]
+\tkzInit[xmax=4.2,ymax=3.2,xmin=-1.2,ymin=-1.2,xstep=1]
+%\tkzGrid
+\tkzAxeXY
+\draw[color=red] plot (\x,\x) node[right] {$f(x)=x$};
+\draw[color=orange,domain=-0.5:4] plot (\x,{0.05*exp(\x)}) node[right] {$f(x)=\frac{1}{20}\mathrm e^x$};
+\draw[color=blue,domain=0:4] plot (\x,{sin(\x r)}) node[right] {$f(x)=\sin x$};
+\draw[color=blue!50,x=1cm,y=0.5cm,domain=-0.5:2.4] plot (\x, {(\x)^3-4*(\x)+2}) node[right] {$f(x)=x^3-4x+2$};
+\end{tikzpicture}
 	\clearpage
-	
+
 \end{document}
